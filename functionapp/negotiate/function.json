@@ -1,0 +1,29 @@
+{
+  "scriptFile": "../functionapp-1.0-SNAPSHOT.jar",
+  "entryPoint": "com.example.Function.negotiate",
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "name": "req",
+      "direction": "in",
+      "webHookType": "NONE",
+      "authLevel": "anonymous",
+      "methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "type": "signalRConnectionInfo",
+      "name": "connectionInfo",
+      "direction": "in",
+      "hubName": "simplechat"
+    },
+    {
+      "type": "http",
+      "name": "$return",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
